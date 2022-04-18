@@ -226,7 +226,7 @@ namespace Calculator
         // Equals button
         private void button18_Click(object sender, EventArgs e)
         {
-            if (!Operators.Contains(textBox1.Text))
+            if (!Operators.Contains(textBox1.Text) && OperatorsMemory.Count > 0)
             {
                 operation("*");
                 textBox1.Text = "";
