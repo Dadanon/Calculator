@@ -226,8 +226,11 @@ namespace Calculator
         // Equals button
         private void button18_Click(object sender, EventArgs e)
         {
-            operation("*");
-            textBox1.Text = "";
+            if (!Operators.Contains(textBox1.Text))
+            {
+                operation("*");
+                textBox1.Text = "";
+            }
         }
 
         // Invert button
